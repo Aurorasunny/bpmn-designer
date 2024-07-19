@@ -1,8 +1,8 @@
-import { UserTask } from "./task/UserTask";
-import { Exclusive } from "./gateway/Exclusive";
-import { Parallel } from "./gateway/Parallel";
-import { StartEvent } from "./event/StartEvent";
-import { EndEvent } from "./event/EndEvent";
+import UserTask from "./task/UserTask";
+import Exclusive from "./gateway/Exclusive";
+import Parallel from "./gateway/Parallel";
+import StartEvent from "./event/StartEvent";
+import EndEvent from "./event/EndEvent";
 
 import { Graph } from "@antv/x6";
 // 节点连接桩定义
@@ -51,14 +51,14 @@ const ports = {
 
 // 注册节点
 // 开始事件
-Graph.registerNode("StartEvent", { ...StartEvent, ports }, true);
+Graph.registerNode("StartEvent1", { ...StartEvent, ports }, true);
 // 结束事件
-Graph.registerNode("EndEvent", { ...EndEvent, ports }, true);
+Graph.registerNode("EndEvent1", { ...EndEvent, ports }, true);
 // 用户任务
-Graph.registerNode("UserTask", { ...UserTask, ports }, true);
+Graph.registerNode("UserTask1", { ...UserTask, ports }, true);
 // 排他网关
-Graph.registerNode("Exclusive", { ...Exclusive, ports }, true);
+Graph.registerNode("Exclusive1", { ...Exclusive, ports }, true);
 // 并行网关
-Graph.registerNode("Parallel", { ...Parallel, ports }, true);
+Graph.registerNode("Parallel1", { ...Parallel, ports }, true);
 
 export default Graph;

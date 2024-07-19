@@ -1,3 +1,4 @@
+import activityUrl from '@/assets/img/activity.png'
 export default {
   inherit: "rect",
   markup: [
@@ -18,21 +19,23 @@ export default {
     body: {
       rx: 6,
       ry: 6,
-      stroke: "#5F95FF",
-      fill: "#EFF4FF",
-      strokeWidth: 1,
+      borderRadius: 50, 
+      stroke: "#e4e7ed",
+      fill: "#eff4ff",
+      filter: 'drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.12))',
+      strokeWidth: 1
     },
     img: {
-      x: 6,
-      y: 6,
+      x: 9,
+      y: 9,
       width: 16,
       height: 16,
-      "xlink:href":
-        "@/assets/img/activity.png",
+      "xlink:href": activityUrl,
     },
     label: {
-      fontSize: 12,
-      fill: "#262626",
+      fontSize: 13,
+      fontWeight: 800,
+      fill: "#606266",
     },
   },
 };

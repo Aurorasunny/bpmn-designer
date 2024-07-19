@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import { Graph, Shape } from "@antv/x6";
+import { Shape } from "@antv/x6";
+import Graph from "@/components/designer";
 import { register, getTeleport } from "@antv/x6-vue-shape";
 import { Dnd } from "@antv/x6-plugin-dnd";
 import { Selection } from "@antv/x6-plugin-selection";
@@ -202,6 +203,17 @@ const init = () => {
       },
     },
   });
+  console.log(graph);
+  graph.addNode({
+    shape: "UserTask1",
+    position: {
+      "x": 500,
+      "y": 280
+    },
+    width: 120,
+    height: 70,
+    label: '用户任务'
+  })
 };
 // 定义插件属性
 const definePluginInfo = (graph) => {
@@ -328,7 +340,7 @@ onMounted(() => {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #FAFCFF;
+    background-color: #fafcff;
     border-radius: 10px;
     .selectItem {
       margin-bottom: 10px;
